@@ -1,0 +1,16 @@
+-- Create the BlogPlatform database
+CREATE DATABASE BlogPlatform;
+
+-- Create a table for blogs
+CREATE TABLE blogs (
+  id serial PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  content TEXT
+);
+
+-- Create a table for comments
+CREATE TABLE comments (
+  id serial PRIMARY KEY,
+  blog_id INT NOT NULL,
+  content TEXT
+);
